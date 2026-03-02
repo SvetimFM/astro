@@ -1,5 +1,34 @@
 # astro
 
+## 6.0.0-beta.18
+
+### Major Changes
+
+- [#15668](https://github.com/withastro/astro/pull/15668) [`1118ac4`](https://github.com/withastro/astro/commit/1118ac4f299341e15061e8a4e6e8423071c4d41c) Thanks [@florian-lefebvre](https://github.com/florian-lefebvre)! - Changes TypeScript configuration - ([v6 upgrade guidance](https://v6.docs.astro.build/en/guides/upgrade-to/v6/#changed-typescript-configuration))
+
+### Patch Changes
+
+- [#15721](https://github.com/withastro/astro/pull/15721) [`e6e146c`](https://github.com/withastro/astro/commit/e6e146cb0ac535e21c26f6b1c3d2f65be9dbdb4c) Thanks [@matthewp](https://github.com/matthewp)! - Fixes action route handling to return 404 for requests to prototype method names like `constructor` or `toString` used as action paths
+
+- [#15704](https://github.com/withastro/astro/pull/15704) [`862d77b`](https://github.com/withastro/astro/commit/862d77bd6c3e05e20fd58293f9577ae685a9b8c9) Thanks [@umutkeltek](https://github.com/umutkeltek)! - Fixes i18n fallback middleware intercepting non-404 responses
+
+  The fallback middleware was triggering for all responses with status >= 300, including legitimate 3xx redirects, 403 forbidden, and 5xx server errors. This broke auth flows and form submissions on localized server routes. The fallback now correctly only triggers for 404 (page not found) responses.
+
+- [#15703](https://github.com/withastro/astro/pull/15703) [`829182b`](https://github.com/withastro/astro/commit/829182bbdfc307a005aea00ac8c00923f76efb08) Thanks [@matthewp](https://github.com/matthewp)! - Fixes server islands returning a 500 error in dev mode for adapters that do not set `adapterFeatures.buildOutput` (e.g. `@astrojs/netlify`)
+
+- [#15685](https://github.com/withastro/astro/pull/15685) [`1a323e5`](https://github.com/withastro/astro/commit/1a323e5c64c7c23212ed80546f593d930115d55c) Thanks [@jcayzac](https://github.com/jcayzac)! - Fix regression where SVG images in content collection `image()` fields could not be rendered as inline components. This behavior is now restored while preserving the TLA deadlock fix.
+
+- [#15696](https://github.com/withastro/astro/pull/15696) [`a9fd221`](https://github.com/withastro/astro/commit/a9fd221bda99db4660c241c494b6d3225eb4e51d) Thanks [@Princesseuh](https://github.com/Princesseuh)! - Fixes images not working in MDX when using the Cloudflare adapter in certain cases
+
+- [#15693](https://github.com/withastro/astro/pull/15693) [`4db2089`](https://github.com/withastro/astro/commit/4db2089a8e01cdb298c49f61817daf240ae07fa5) Thanks [@ArmandPhilippot](https://github.com/ArmandPhilippot)! - Fixes the links to Astro Docs to match the v6 structure.
+
+- [#15717](https://github.com/withastro/astro/pull/15717) [`4000aaa`](https://github.com/withastro/astro/commit/4000aaa2d361cbfc9bbf280a9b0e78e6db167945) Thanks [@matthewp](https://github.com/matthewp)! - Ensures that URLs with multiple leading slashes (e.g. `//admin`) are normalized to a single slash before reaching middleware, so that pathname checks like `context.url.pathname.startsWith('/admin')` work consistently regardless of the request URL format
+
+- [#15718](https://github.com/withastro/astro/pull/15718) [`14f37b8`](https://github.com/withastro/astro/commit/14f37b80aa2bd086cf31feccd5016c73a09822ae) Thanks [@florian-lefebvre](https://github.com/florian-lefebvre)! - Fixes a case where internal headers may leak when rendering error pages
+
+- Updated dependencies [[`f94d3c5`](https://github.com/withastro/astro/commit/f94d3c5313e5a7576cf2cb316a85d68d335a188f)]:
+  - @astrojs/markdown-remark@7.0.0-beta.9
+
 ## 6.0.0-beta.17
 
 ### Minor Changes

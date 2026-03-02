@@ -1,5 +1,14 @@
 # @astrojs/cloudflare
 
+## 13.0.0-beta.12
+
+### Patch Changes
+
+- [#15696](https://github.com/withastro/astro/pull/15696) [`a9fd221`](https://github.com/withastro/astro/commit/a9fd221bda99db4660c241c494b6d3225eb4e51d) Thanks [@Princesseuh](https://github.com/Princesseuh)! - Fixes duplicate logging showing up in some cases when prerendering pages
+
+- Updated dependencies []:
+  - @astrojs/underscore-redirects@1.0.0
+
 ## 13.0.0-beta.11
 
 ### Patch Changes

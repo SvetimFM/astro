@@ -1,5 +1,11 @@
 # @astrojs/markdown-remark
 
+## 7.0.0-beta.9
+
+### Patch Changes
+
+- [#15651](https://github.com/withastro/astro/pull/15651) [`f94d3c5`](https://github.com/withastro/astro/commit/f94d3c5313e5a7576cf2cb316a85d68d335a188f) Thanks [@ocavue](https://github.com/ocavue)! - Reuses cached Shiki highlighter instances across languages.
+
 ## 7.0.0-beta.8
 
 ### Patch Changes
